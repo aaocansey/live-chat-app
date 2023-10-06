@@ -1,0 +1,92 @@
+:root {
+    --primary: #1C1214;
+    --secondary: #3D3235;
+
+}
+
+
+.main {
+    position: relative;
+    background: var(--primary) !important;
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50px 100px repeat(4, 1fr);
+    overflow-y: scroll;
+}
+
+.header {
+    padding: 0.5rem;
+    color: red;
+    background: var(--secondary);
+    height: 2rem;
+    grid-column: 1/7;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body { 
+    grid-column: 1/7;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.sent {
+    position: relative;
+    align-self: flex-start;
+    color: white;
+    background: red;
+    border-radius: 50px 50px 0 50px;
+    padding: 0 0.7rem;
+    width: fit-content;
+}
+
+.received {
+    position: relative;
+    align-self: flex-end;
+    background: white;
+    color: red;
+    border-radius: 50px 50px 0 50px;
+    padding: 0 0.7rem;
+    width: fit-content;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin-top: 58.8%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.footer>.btn,
+input {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    align-self: center;
+    outline: none;
+}
+
+.footer input {
+    width: 90%;
+    height: 3rem;
+    padding: 0 0 0 20px;
+}
+
+.footer .btn {
+    padding: 0;
+    width: 10%;
+    height: 3rem;
+    background: rgb(215, 215, 215);
+    color: var(--primary);
+}
+
+.footer .btn:hover {
+    background: red;
+    color: whitesmoke;
+}
