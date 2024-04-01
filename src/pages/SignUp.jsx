@@ -13,8 +13,8 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signup(name, email, password);
-    navigate("/chat");
+    const signupResponse = await signup(name, email, password);
+    signupResponse?navigate("/chat"):null;
   };
 
   return (
@@ -51,7 +51,7 @@ const SignUp = () => {
           />
         </div>
         <button>Sign Up</button>
-        {error && <div>{error}</div>}
+        {error && <div className="error-msg">{error}</div>}
       </form>
 
       <a href="/login" className="form-link">
