@@ -13,8 +13,8 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const signupResponse = await signup(name, email, password);
-    signupResponse?navigate("/chat"):null;
+    await signup(name, email, password);
+    navigate("/chat")
   };
 
   return (
