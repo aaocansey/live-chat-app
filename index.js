@@ -16,7 +16,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://live-chat-app-hne3-deuvclwaa-aaocanseys-projects.vercel.app/"],
     methods: ["GET", "POST"],
   },
 });
