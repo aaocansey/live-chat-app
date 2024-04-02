@@ -26,6 +26,7 @@
     height: 35rem;
     width: 30rem;
     justify-content: space-evenly;
+    font-size: medium;
 }
 
 .form-div label {
